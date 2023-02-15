@@ -23,7 +23,7 @@ class Post(db.Model):
     userID = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     # Constructor of a Notes object, initializes of instance variables within object
-    def __init__(name, score):
+    def __init__(self, name, score):
         self.name = name
         self.score = score
       
@@ -100,7 +100,7 @@ class User(db.Model):
         return self.score
     
     # a setter function, allows name to be updated after initial object creation
-    @uid.setter
+    @score.setter
     def score(self, score):
         self._score = score
         

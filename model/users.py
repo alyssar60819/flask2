@@ -192,7 +192,7 @@ def initUsers():
          db.init_app(app)
          db.create_all()
          """Tester data for table"""
-         u1 = User(name='alyssa', uid='pee', score = 10)
+         u1 = User(name='alyssa', uid='12345', score = 10)
        
 
          users = [u1]
@@ -207,3 +207,4 @@ def initUsers():
                  '''fails with bad or duplicate data'''
                  db.session.remove()
                  print(f"Duplicate email, or error: {user.uid}")
+

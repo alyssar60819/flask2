@@ -6,13 +6,11 @@ from flask import render_template  # import render_template from "public" flask 
 # import "packages" from "this" project
 from __init__ import app  # Definitions initialization
 from model.jokes import initJokes
-from model.leaderboard import get_leaderboard
 
 # setup APIs
 from api.covid import covid_api # Blueprint import api definition
 from api.joke import joke_api # Blueprint import api definition
 from api.user import user_api # Blueprint import api definition
-from api.leaderboard import leaderboard_api
 
 # setup App pages
 from projects.projects import app_projects # Blueprint directory import projects definition
@@ -22,7 +20,6 @@ app.register_blueprint(joke_api) # register api routes
 app.register_blueprint(covid_api) # register api routes
 app.register_blueprint(user_api) # register api routes
 app.register_blueprint(app_projects) # register app pages
-app.register_blueprint(leaderboard_api)
 
 @app.errorhandler(404)  # catch for URL not found
 def page_not_found(e):
@@ -40,7 +37,6 @@ def stub():
 @app.before_first_request
 def activate_job():
     initJokes()
-    get_leaderboard()
 
 # this runs the application on the development server
 if __name__ == "__main__":

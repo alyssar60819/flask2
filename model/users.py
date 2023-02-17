@@ -200,8 +200,6 @@ def initUsers():
          """Builds sample user/note(s) data"""
          for user in users:
              try:
-                 user.posts.append(Post(id=user.id, image='ncs_logo.png', score= user.score))
-                 '''add user/post data to table'''
                  user.create()
              except IntegrityError:
                  '''fails with bad or duplicate data'''

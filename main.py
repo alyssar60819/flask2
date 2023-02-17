@@ -5,7 +5,7 @@ from flask import render_template  # import render_template from "public" flask 
 
 # import "packages" from "this" project
 from __init__ import app  # Definitions initialization
-from model.jokes import initJokes
+from model.users import initUsers
 from flask_cors import CORS
 
 # setup APIs
@@ -37,7 +37,7 @@ def stub():
 
 @app.before_first_request
 def activate_job():
-    initJokes()
+    initUsers()
 
 # this runs the application on the development server
 if __name__ == "__main__":

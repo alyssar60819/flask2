@@ -15,4 +15,4 @@
  # instance data, databases
  volumes/sqlite.db
  instance/volumes/sqlite.db
-volumes/sqlite.db
+ volumes/sqlite.db

@@ -192,11 +192,12 @@ def initUsers():
          db.init_app(app)
          db.create_all()
          """Tester data for table"""
-         u1 = User(name='Alyssa', uid='86607', score = 32)
-         u2 = User(name='Joshua', uid='45138', score = 18)
-         u3 = User(name='John', uid='92630', score = 24)
-         u4 = User(name='Sarah', uid='20741', score = 16)
-         u5 = User(name='Paul', uid='52639', score = 29)
+         u0 = User(name='Alyssa', uid='86607', score = 32)
+         u1 = User(name='Joshua', uid='45138', score = 18)
+         u2 = User(name='John', uid='92630', score = 24)
+         u3 = User(name='Sarah', uid='20741', score = 16)
+         u4 = User(name='Paul', uid='52639', score = 29)
+         u5 = User(name='Lauren', uid='62637', score = 21)
        
        
        
